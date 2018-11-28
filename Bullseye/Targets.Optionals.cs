@@ -13,9 +13,5 @@ namespace Bullseye
         public static void Target<TInput>(string name, IEnumerable<TInput> forEach, Func<TInput, Task> action) => Target(name, default, forEach, action);
 
         public static void Target<TInput>(string name, IEnumerable<TInput> forEach, Action<TInput> action) => Target(name, default, forEach, action);
-
-        public static Task RunTargetsAsync() => RunTargetsAsync(default);
-
-        public static void RunTargets() => RunTargets(default);
     }
 }
